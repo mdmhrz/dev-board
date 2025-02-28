@@ -9,127 +9,206 @@
     <!-- Tailwind and DaisyUI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Font CDN  -->
 
+    <!-- Google Poppins Font CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-    <style>
-        * {
-            font-family: "Roboto", sans-serif;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        custom1: '#b5bbf744',
+                        custom2: ''
+                    },
+                    fontFamily: {
 
+                        primary: ["Poppins", "sans-serif"],
+                    },
+                    backgroundImage: {
+                        'custom-gradient': 'linear-gradient(to bottom, rgba(243, 243, 243, 1), rgba(243, 243, 243, 0))',
+                    },
+                }
+            }
         }
-    </style>
+    </script>
 </head>
 
-<body class="bg-sky-100 min-h-screen w-full pt-4">
-    <header class="flex items-center justify-between px-4 py-4 md:w-10/12 mx-auto bg-white rounded-lg">
+<body class="bg-custom1 min-h-screen w-full pt-4 font-primary">
+    <header class="md:flex items-center justify-between px-4 py-4 md:w-10/12 mx-auto bg-white rounded-lg">
         <div class="flex items-center gap-3">
-            <img class="w-6" src="./assets/logo.png" alt="">
-            <p class="text-2xl">Dev<span class="font-bold">Board</span></p>
+            <img class="w-10" src="./assets/logo.png" alt="">
+            <p class="text-[36px] text-blue-600">Dev<span class="font-bold">Board</span></p>
         </div>
         <div class="flex items-center justify-center gap-5">
-            <div class="flex items-center justify-center gap-3 bg-sky-100 p-2 rounded-md">
-                <img class="h-4 w-4" src="./assets/checkbox.png" alt="">
-                <span class="font-bold text-[1.25rem]">23</span>
+            <div class="flex items-center justify-center gap-3 bg-custom1 py-3 px-4 rounded-md">
+                <img class="h-8 w-8" src="./assets/checkbox.png" alt="">
+                <span class="font-extrabold text-[32px]">23</span>
             </div>
-            <div>
-                <img class="bg-sky-100 p-2 rounded-full cursor-pointer w-12 h-12" src="./assets/theme-btn.png" alt="">
+            <div class="bg-custom1 p-2 rounded-full cursor-pointer">
+                <img class=" w-14 h-14" src="./assets/theme-btn.png" alt="">
             </div>
         </div>
     </header>
-    <main class="mt-4 mb-4 grid gap-5 md:grid-cols-4 grid-cols-1 md:w-10/12 mx-auto">
+    <main class="mt-4 mb-4 grid gap-y-4 lg:gap-x-4 lg:grid-cols-4 grid-cols-1 md:w-10/12 mx-auto">
         <!-- Main Section -->
-        <section class="px-4 py-4 md:col-span-3 border bg-white rounded-lg">
+        <section class="px-6 py-6 md:col-span-3 border bg-white rounded-lg">
             <!-- Dashboard -->
-            <div class="md:grid md:grid-cols-4 md:gap-4 mb-4">
-                <div class="flex items-center gap-4 bg-sky-100 p-4 rounded-md justify-center">
-                    <div class="rounded-full bg-white p-2">
-                        <img class="w-6" src="./assets/checkbox.png" alt="">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 md:gap-x-6 gap-y-6 mb-4">
+                <div class="flex items-center gap-4 bg-custom1 p-4 rounded-md justify-center">
+                    <div class="rounded-full bg-white p-4">
+                        <img class="w-7 h-7" src="./assets/checkbox.png" alt="">
                     </div>
                     <div>
-                        <p>Task Assigned</p>
-                        <p class="font-bold">05</p>
+                        <p class="text-[1rem] font-medium">Task Assigned</p>
+                        <p class="font-bold text-[32px]">05</p>
                     </div>
                 </div>
                 <div
-                    class="flex items-center justify-center gap-3 col-span-2  bg-gradient-to-r from-blue-600 to-blue-400 text-white p-4 rounded-md cursor-pointer">
+                    class="flex items-center justify-center gap-3 md:order-2 xl:order-none col-span-2  bg-gradient-to-br from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] text-white p-4 rounded-md cursor-pointer">
                     <img class="img" src="./assets/board.png" alt="">
-                    <p class="text-[1.25rem]">Discover Something New Today!</p>
+                    <p class="text-[24px] font-medium">Discover Something New Today!</p>
                 </div>
-                <div class=" bg-sky-100 p-4 rounded-md flex items-center gap-3 justify-center">
-                    <img src="./assets/calender.png" alt="">
-                    <p>Wed, Feb 28 2025</p>
+                <div class=" bg-custom1 p-4 rounded-md flex items-center gap-3 justify-center">
+                    <div class="rounded-full bg-white p-4">
+                        <img class="w-7 h-7" src="./assets/calender.png" alt="">
+                    </div>
+                    <p class="text-[22px]">Wed, <span class="font-bold">Feb 28 2025</span></p>
                 </div>
             </div>
             <!-- Horizontal Line -->
-            <div class="relative mb-10">
-                <div class="absolute left-[-16px] right-[-16px] border-t-2 border-dashed border-gray-200"></div>
+            <div class="relative mb-20 mt-10">
+                <div class="absolute -left-6 -right-6 border-t-2 border-dashed border-gray-200"></div>
             </div>
             <!-- Task Box Section -->
-            <div class="grid grid-cols-3 gap-4">
-                <div class="bg-sky-100 p-4 rounded-md">
-                    <p class="p-2 bg-white rounded-md mb-2 text-[14px] font-bold">Shop Ease</p>
-                    <h1 class="text-[1.25rem] font-bold mb-3">Fix Mobile Button Issue</h1>
-                    <p class="p-2 bg-white rounded-md text-[14px]">A card component has a figure, a body part, and
-                        inside body there
-                        are title and actions parts</p>
-                    <p class="text-gray-500 text-[14px] mt-3">Deadline</p>
-                    <p class="mb-4">21 March 2025</p>
-                    <button class="px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Cards 01 -->
+                <div class="bg-custom1 p-4 rounded-md shadow-xl">
+                    <button class="p-2 bg-white rounded-md mb-2 text-[16px] cursor-text">Shop Ease</button>
+                    <h1 class="text-[24px] font-bold mb-3">Fix Mobile Button Issue</h1>
+                    <p class="p-2 mb-4 bg-[#ffff] rounded-md text-[14px]">Debug using Chrome DevTools, check for
+                        overlapping elements, and ensure onClick works properly
+                        and ensure onClick works properly</p>
+
+                    <!-- Horizontal Line -->
+                    <div class="relative mb-7">
+                        <div class="absolute left-0 right-0 border-t-2 border-dashed border-white"></div>
+                    </div>
+                    <div class="flex items-center justify-between gap-3">
+                        <div>
+                            <p class="text-gray-500 text-[14px] mt-3">Deadline</p>
+                            <p class="mb-4 text-[16px] font-semibold">21 March 2025</p>
+                        </div>
+                        <button class="px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
+                    </div>
                 </div>
-                <div class="bg-sky-100 p-4 rounded-md">
-                    <p class="p-2 bg-white rounded-md mb-2 text-[14px] font-bold">Shop Ease</p>
-                    <h1 class="text-[1.25rem] font-bold mb-3">Fix Mobile Button Issue</h1>
-                    <p class="p-2 bg-white rounded-md text-[14px]">A card component has a figure, a body part, and
-                        inside body there
-                        are title and actions parts</p>
-                    <p class="text-gray-500 text-[14px] mt-3">Deadline</p>
-                    <p class="mb-4">21 March 2025</p>
-                    <button class="px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
+                <!-- Cards 02 -->
+                <div class="bg-custom1 p-4 rounded-md shadow-xl">
+                    <button class="p-2 bg-white rounded-md mb-2 text-[16px] cursor-text">Shop Ease</button>
+                    <h1 class="text-[24px] font-bold mb-3">Fix Mobile Button Issue</h1>
+                    <p class="p-2 mb-4 bg-[#ffff] rounded-md text-[14px]">Debug using Chrome DevTools, check for
+                        overlapping elements, and ensure onClick works properly
+                        and ensure onClick works properly</p>
+
+                    <!-- Horizontal Line -->
+                    <div class="relative mb-7">
+                        <div class="absolute left-0 right-0 border-t-2 border-dashed border-white"></div>
+                    </div>
+                    <div class="flex items-center justify-between gap-3">
+                        <div>
+                            <p class="text-gray-500 text-[14px] mt-3">Deadline</p>
+                            <p class="mb-4 text-[16px] font-semibold">21 March 2025</p>
+                        </div>
+                        <button class="px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
+                    </div>
                 </div>
-                <div class="bg-sky-100 p-4 rounded-md">
-                    <p class="p-2 bg-white rounded-md mb-2 text-[14px] font-bold">Shop Ease</p>
-                    <h1 class="text-[1.25rem] font-bold mb-3">Fix Mobile Button Issue</h1>
-                    <p class="p-2 bg-white rounded-md text-[14px]">A card component has a figure, a body part, and
-                        inside body there
-                        are title and actions parts</p>
-                    <p class="text-gray-500 text-[14px] mt-3">Deadline</p>
-                    <p class="mb-4">21 March 2025</p>
-                    <button class="px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
+                <!-- Cards 03 -->
+                <div class="bg-custom1 p-4 rounded-md shadow-xl">
+                    <button class="p-2 bg-white rounded-md mb-2 text-[16px] cursor-text">Shop Ease</button>
+                    <h1 class="text-[24px] font-bold mb-3">Fix Mobile Button Issue</h1>
+                    <p class="p-2 mb-4 bg-[#ffff] rounded-md text-[14px]">Debug using Chrome DevTools, check for
+                        overlapping elements, and ensure onClick works properly
+                        and ensure onClick works properly</p>
+
+                    <!-- Horizontal Line -->
+                    <div class="relative mb-7">
+                        <div class="absolute left-0 right-0 border-t-2 border-dashed border-white"></div>
+                    </div>
+                    <div class="flex items-center justify-between gap-3">
+                        <div>
+                            <p class="text-gray-500 text-[14px] mt-3">Deadline</p>
+                            <p class="mb-4 text-[16px] font-semibold">21 March 2025</p>
+                        </div>
+                        <button class="px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
+                    </div>
                 </div>
-                <div class="bg-sky-100 p-4 rounded-md">
-                    <p class="p-2 bg-white rounded-md mb-2 text-[14px] font-bold">Shop Ease</p>
-                    <h1 class="text-[1.25rem] font-bold mb-3">Fix Mobile Button Issue</h1>
-                    <p class="p-2 bg-white rounded-md text-[14px]">A card component has a figure, a body part, and
-                        inside body there
-                        are title and actions parts</p>
-                    <p class="text-gray-500 text-[14px] mt-3">Deadline</p>
-                    <p class="mb-4">21 March 2025</p>
-                    <button class="px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
+                <!-- Cards 04 -->
+                <div class="bg-custom1 p-4 rounded-md shadow-xl">
+                    <button class="p-2 bg-white rounded-md mb-2 text-[16px] cursor-text">Shop Ease</button>
+                    <h1 class="text-[24px] font-bold mb-3">Fix Mobile Button Issue</h1>
+                    <p class="p-2 mb-4 bg-[#ffff] rounded-md text-[14px]">Debug using Chrome DevTools, check for
+                        overlapping elements, and ensure onClick works properly
+                        and ensure onClick works properly</p>
+
+                    <!-- Horizontal Line -->
+                    <div class="relative mb-7">
+                        <div class="absolute left-0 right-0 border-t-2 border-dashed border-white"></div>
+                    </div>
+                    <div class="flex items-center justify-between gap-3">
+                        <div>
+                            <p class="text-gray-500 text-[14px] mt-3">Deadline</p>
+                            <p class="mb-4 text-[16px] font-semibold">21 March 2025</p>
+                        </div>
+                        <button class="px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
+                    </div>
                 </div>
-                <div class="bg-sky-100 p-4 rounded-md">
-                    <p class="p-2 bg-white rounded-md mb-2 text-[14px] font-bold">Shop Ease</p>
-                    <h1 class="text-[1.25rem] font-bold mb-3">Fix Mobile Button Issue</h1>
-                    <p class="p-2 bg-white rounded-md text-[14px]">A card component has a figure, a body part, and
-                        inside body there
-                        are title and actions parts</p>
-                    <p class="text-gray-500 text-[14px] mt-3">Deadline</p>
-                    <p class="mb-4">21 March 2025</p>
-                    <button class="px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
+                <!-- Cards 05 -->
+                <div class="bg-custom1 p-4 rounded-md shadow-xl">
+                    <button class="p-2 bg-white rounded-md mb-2 text-[16px] cursor-text">Shop Ease</button>
+                    <h1 class="text-[24px] font-bold mb-3">Fix Mobile Button Issue</h1>
+                    <p class="p-2 mb-4 bg-[#ffff] rounded-md text-[14px]">Debug using Chrome DevTools, check for
+                        overlapping elements, and ensure onClick works properly
+                        and ensure onClick works properly</p>
+
+                    <!-- Horizontal Line -->
+                    <div class="relative mb-7">
+                        <div class="absolute left-0 right-0 border-t-2 border-dashed border-white"></div>
+                    </div>
+                    <div class="flex items-center justify-between gap-3">
+                        <div>
+                            <p class="text-gray-500 text-[14px] mt-3">Deadline</p>
+                            <p class="mb-4 text-[16px] font-semibold">21 March 2025</p>
+                        </div>
+                        <button class="px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
+                    </div>
                 </div>
-                <div class="bg-sky-100 p-4 rounded-md">
-                    <p class="p-2 bg-white rounded-md mb-2 text-[14px] font-bold">Shop Ease</p>
-                    <h1 class="text-[1.25rem] font-bold mb-3">Fix Mobile Button Issue</h1>
-                    <p class="p-2 bg-white rounded-md text-[14px]">A card component has a figure, a body part, and
-                        inside body there
-                        are title and actions parts</p>
-                    <p class="text-gray-500 text-[14px] mt-3">Deadline</p>
-                    <p class="mb-4">21 March 2025</p>
-                    <button class="px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
+                <!-- Cards 06 -->
+                <div class="bg-custom1 p-4 rounded-md shadow-xl">
+                    <button class="p-2 bg-white rounded-md mb-2 text-[16px] cursor-text">Shop Ease</button>
+                    <h1 class="text-[24px] font-bold mb-3">Fix Mobile Button Issue</h1>
+                    <p class="p-2 mb-4 bg-[#ffff] rounded-md text-[14px]">Debug using Chrome DevTools, check for
+                        overlapping elements, and ensure onClick works properly
+                        and ensure onClick works properly</p>
+
+                    <!-- Horizontal Line -->
+                    <div class="relative mb-7">
+                        <div class="absolute left-0 right-0 border-t-2 border-dashed border-white"></div>
+                    </div>
+                    <div class="flex items-center justify-between gap-3">
+                        <div>
+                            <p class="text-gray-500 text-[14px] mt-3">Deadline</p>
+                            <p class="mb-4 text-[16px] font-semibold">21 March 2025</p>
+                        </div>
+                        <button class="px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
+                    </div>
                 </div>
+
+
+
 
 
             </div>
@@ -140,7 +219,7 @@
             <div class="flex items-center justify-center flex-col gap-3 mb-4">
                 <div class="flex items-center justify-center gap-3">
                     <img class="w-4" src="./assets/activity.png" alt="">
-                    <p>Activity Log</p>
+                    <p class="text-[20px] font-medium">Activity Log</p>
                 </div>
                 <button class="px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Clear History</button>
             </div>
