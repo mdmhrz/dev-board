@@ -1,14 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dev Board</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <!-- Tailwind and DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font CDN  -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            font-family: "Roboto", sans-serif;
+
+        }
+    </style>
 </head>
 
-<body>
+<body class="bg-sky-100 min-h-screen w-full pt-4">
+    <header class="flex items-center justify-between px-4 py-4 md:w-10/12 mx-auto bg-white rounded-lg">
+        <div class="flex items-center gap-3">
+            <img class="w-6" src="./assets/logo.png" alt="">
+            <p class="text-2xl">Dev<span class="font-bold">Board</span></p>
+        </div>
+        <div class="flex items-center justify-center gap-5">
+            <div class="flex items-center justify-center gap-3 bg-sky-50 p-2 rounded-md">
+                <img class="h-4 w-4" src="./assets/checkbox.png" alt="">
+                <span class="font-bold text-[1.25rem]">23</span>
+            </div>
+            <div>
+                <img class="bg-sky-50 p-2 rounded-full cursor-pointer w-12 h-12" src="./assets/theme-btn.png" alt="">
+            </div>
+        </div>
+    </header>
+    <main>
 
+    </main>
 </body>
 
 </html>
