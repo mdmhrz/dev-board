@@ -23,22 +23,17 @@
                 extend: {
                     colors: {
                         custom1: '#b5bbf744',
-                        custom2: ''
                     },
                     fontFamily: {
-
                         primary: ["Poppins", "sans-serif"],
-                    },
-                    backgroundImage: {
-                        'custom-gradient': 'linear-gradient(to bottom, rgba(243, 243, 243, 1), rgba(243, 243, 243, 0))',
-                    },
+                    }
                 }
             }
         }
     </script>
 </head>
 
-<body class="bg-custom1 min-h-screen w-full pt-8 font-primary">
+<body class="bg-custom1 min-h-screen w-full pt-6 pb-4 font-primary">
     <header class="md:flex items-center justify-between px-4 py-4 md:w-10/12 mx-auto bg-white rounded-lg">
         <div class="flex items-center gap-3">
             <img class="w-10" src="./assets/logo.png" alt="">
@@ -47,7 +42,7 @@
         <div class="flex items-center justify-center gap-5">
             <div class="flex items-center justify-center gap-3 bg-custom1 py-3 px-4 rounded-md">
                 <img class="h-8 w-8" src="./assets/checkbox.png" alt="">
-                <span class="font-extrabold text-[32px]">23</span>
+                <span id="marks" class="font-extrabold text-[32px]">23</span>
             </div>
             <div class="bg-custom1 p-2 rounded-full cursor-pointer">
                 <img class=" w-14 h-14" src="./assets/theme-btn.png" alt="">
@@ -65,7 +60,7 @@
                     </div>
                     <div>
                         <p class="text-[1rem] font-medium">Task Assigned</p>
-                        <p class="font-bold text-[32px]">05</p>
+                        <p id="task-left" class="font-bold text-[32px]">06</p>
                     </div>
                 </div>
                 <div
@@ -103,16 +98,16 @@
                             <p class="text-gray-500 text-[14px] mt-3">Deadline</p>
                             <p class="mb-4 text-[16px] font-semibold">21 March 2025</p>
                         </div>
-                        <button class="px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
+                        <button
+                            class=" task-btn px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
                     </div>
                 </div>
                 <!-- Cards 02 -->
                 <div class="bg-custom1 p-4 rounded-md shadow-xl">
-                    <button class="p-2 bg-white rounded-md mb-2 text-[16px] cursor-text">Shop Ease</button>
-                    <h1 class="text-[24px] font-bold mb-3">Fix Mobile Button Issue</h1>
-                    <p class="p-2 mb-4 bg-[#ffff] rounded-md text-[14px]">Debug using Chrome DevTools, check for
-                        overlapping elements, and ensure onClick works properly
-                        and ensure onClick works properly</p>
+                    <button class="p-2 bg-white rounded-md mb-2 text-[16px] cursor-text">CloudSync</button>
+                    <h1 class="text-[24px] font-bold mb-3">Add Dark Mode</h1>
+                    <p class="p-2 mb-4 bg-[#ffff] rounded-md text-[14px]">Store the user's preference in localStorage,
+                        update CSS variables dynamically, and apply a smooth transition effect.</p>
 
                     <!-- Horizontal Line -->
                     <div class="relative mb-7">
@@ -121,15 +116,16 @@
                     <div class="flex items-center justify-between gap-3">
                         <div>
                             <p class="text-gray-500 text-[14px] mt-3">Deadline</p>
-                            <p class="mb-4 text-[16px] font-semibold">21 March 2025</p>
+                            <p class="mb-4 text-[16px] font-semibold">25 March 2025</p>
                         </div>
-                        <button class="px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
+                        <button
+                            class="task-btn px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
                     </div>
                 </div>
                 <!-- Cards 03 -->
                 <div class="bg-custom1 p-4 rounded-md shadow-xl">
-                    <button class="p-2 bg-white rounded-md mb-2 text-[16px] cursor-text">Shop Ease</button>
-                    <h1 class="text-[24px] font-bold mb-3">Fix Mobile Button Issue</h1>
+                    <button class="p-2 bg-white rounded-md mb-2 text-[16px] cursor-text">SwiftPay</button>
+                    <h1 class="text-[24px] font-bold mb-3">Optimize Home page </h1>
                     <p class="p-2 mb-4 bg-[#ffff] rounded-md text-[14px]">Debug using Chrome DevTools, check for
                         overlapping elements, and ensure onClick works properly
                         and ensure onClick works properly</p>
@@ -141,15 +137,17 @@
                     <div class="flex items-center justify-between gap-3">
                         <div>
                             <p class="text-gray-500 text-[14px] mt-3">Deadline</p>
-                            <p class="mb-4 text-[16px] font-semibold">21 March 2025</p>
+                            <p class="mb-4 text-[16px] font-semibold">31 March 2025</p>
                         </div>
-                        <button class="px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
+                        <button
+                            class="task-btn px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
                     </div>
                 </div>
                 <!-- Cards 04 -->
                 <div class="bg-custom1 p-4 rounded-md shadow-xl">
-                    <button class="p-2 bg-white rounded-md mb-2 text-[16px] cursor-text">Shop Ease</button>
-                    <h1 class="text-[24px] font-bold mb-3">Fix Mobile Button Issue</h1>
+                    <button class="p-2 bg-white rounded-md mb-2 text-[16px] cursor-text">Meta
+                    </button>
+                    <h1 class="text-[24px] font-bold mb-3">Add new emoji 🤲</h1>
                     <p class="p-2 mb-4 bg-[#ffff] rounded-md text-[14px]">Debug using Chrome DevTools, check for
                         overlapping elements, and ensure onClick works properly
                         and ensure onClick works properly</p>
@@ -161,15 +159,16 @@
                     <div class="flex items-center justify-between gap-3">
                         <div>
                             <p class="text-gray-500 text-[14px] mt-3">Deadline</p>
-                            <p class="mb-4 text-[16px] font-semibold">21 March 2025</p>
+                            <p class="mb-4 text-[16px] font-semibold">05 April 2025</p>
                         </div>
-                        <button class="px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
+                        <button
+                            class="task-btn px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
                     </div>
                 </div>
                 <!-- Cards 05 -->
                 <div class="bg-custom1 p-4 rounded-md shadow-xl">
-                    <button class="p-2 bg-white rounded-md mb-2 text-[16px] cursor-text">Shop Ease</button>
-                    <h1 class="text-[24px] font-bold mb-3">Fix Mobile Button Issue</h1>
+                    <button class="p-2 bg-white rounded-md mb-2 text-[16px] cursor-text">Google LLC</button>
+                    <h1 class="text-[24px] font-bold mb-3">Integrate AI search</h1>
                     <p class="p-2 mb-4 bg-[#ffff] rounded-md text-[14px]">Debug using Chrome DevTools, check for
                         overlapping elements, and ensure onClick works properly
                         and ensure onClick works properly</p>
@@ -181,15 +180,16 @@
                     <div class="flex items-center justify-between gap-3">
                         <div>
                             <p class="text-gray-500 text-[14px] mt-3">Deadline</p>
-                            <p class="mb-4 text-[16px] font-semibold">21 March 2025</p>
+                            <p class="mb-4 text-[16px] font-semibold">15 April 2025</p>
                         </div>
-                        <button class="px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
+                        <button
+                            class="task-btn px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
                     </div>
                 </div>
                 <!-- Cards 06 -->
                 <div class="bg-custom1 p-4 rounded-md shadow-xl">
-                    <button class="p-2 bg-white rounded-md mb-2 text-[16px] cursor-text">Shop Ease</button>
-                    <h1 class="text-[24px] font-bold mb-3">Fix Mobile Button Issue</h1>
+                    <button class="p-2 bg-white rounded-md mb-2 text-[16px] cursor-text">Glassdoar</button>
+                    <h1 class="text-[24px] font-bold mb-3">Improve Job searching </h1>
                     <p class="p-2 mb-4 bg-[#ffff] rounded-md text-[14px]">Debug using Chrome DevTools, check for
                         overlapping elements, and ensure onClick works properly
                         and ensure onClick works properly</p>
@@ -201,9 +201,10 @@
                     <div class="flex items-center justify-between gap-3">
                         <div>
                             <p class="text-gray-500 text-[14px] mt-3">Deadline</p>
-                            <p class="mb-4 text-[16px] font-semibold">21 March 2025</p>
+                            <p class="mb-4 text-[16px] font-semibold">05 May 2025</p>
                         </div>
-                        <button class="px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
+                        <button
+                            class="task-btn px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
                     </div>
                 </div>
 
@@ -227,11 +228,10 @@
             <div class="relative mb-10">
                 <div class="absolute left-[-16px] right-[-16px] border-t-2 border-dashed border-gray-200"></div>
             </div>
-
-
         </section>
 
     </main>
+    <script src="../scripts/script.js"></script>
 </body>
 
 </html>
