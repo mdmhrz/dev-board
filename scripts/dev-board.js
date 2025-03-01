@@ -60,7 +60,3 @@ document.getElementById('bg-change-btn').addEventListener('click', function () {
 });
 
 
-
-// St Current Dt in Display by calling id name
-setCurrentDateByID('display-date');
-
