@@ -3,8 +3,9 @@ const taskBtns = document.querySelectorAll('.task-btn')
 const marks = document.getElementById('marks')
 const taskLeft = document.getElementById('task-left')
 
+const taskBtnsArray = Array.from(taskBtns);
 
-for (const btn of taskBtns) {
+for (const btn of taskBtnsArray) {
     btn.addEventListener('click', function (event) {
         alert('Board Updated Successfully')
         const updatedMarks = parseInt(marks.innerText);
@@ -19,13 +20,11 @@ for (const btn of taskBtns) {
         btn.classList.add('bg-blue-200', 'text-gray-200', 'cursor-not-allowed');
         btn.disabled = true;
 
+
+
         // Activity add to history log.
-        const title = document.getElementById('title-1');
-        const title2 = document.getElementById('title-2')
-        const title3 = document.getElementById('title-3')
-        const title4 = document.getElementById('title-4')
-        const title5 = document.getElementById('title-5')
-        const title6 = document.getElementById('title-6')
+        const selectedTitle = `title-${taskBtnsArray.indexOf(btn) + 1}`;
+        const title = document.getElementById(selectedTitle).innerText;
         const historyContainer = document.getElementById('activity-log-container');
 
         const getTime = currentTime(new Date());
@@ -33,7 +32,7 @@ for (const btn of taskBtns) {
         const newHistory = document.createElement('div');
         newHistory.innerHTML = `
             <p class="bg-custom1 p-3 mb-4 rounded-md shadow-md">
-            You have completed the task Fix Mobile Button issue at ${getTime}
+            You have completed the task ${title} at ${getTime}
             </p>
         `;
 
@@ -45,6 +44,7 @@ for (const btn of taskBtns) {
 document.getElementById('clear-history-btn').addEventListener('click', function () {
     document.getElementById('activity-log-container').innerHTML = '';
 })
+
 
 // Background Change 
 const bgColors = ['#BECEF3', '#C8E3D7', '#EBEBFB', '#CBB8D6', '#98D4C5'];
@@ -58,4 +58,9 @@ document.getElementById('bg-change-btn').addEventListener('click', function () {
         clickIndex = 0;
     }
 });
+
+
+
+// St Current Dt in Display by calling id name
+setCurrentDateByID('display-date');
 

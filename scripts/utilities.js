@@ -9,3 +9,20 @@ function currentTime(date) {
     minutes = minutes < 10 ? '0' + minutes : minutes;
     return `${hours}:${minutes}:${seconds} ${ampm}`
 }
+
+// Set Current Date
+
+function setCurrentDateByID(id) {
+    const today = new Date();
+
+    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const dayName = days[today.getDay()];
+    const date = String(today.getDate()).padStart(2, '0');
+    const monthName = months[today.getMonth()];
+    const year = today.getFullYear();
+
+    const currentDate = `${dayName}, ${date} ${monthName} ${year}`;
+
+    document.getElementById(id).innerText = currentDate;
+}
