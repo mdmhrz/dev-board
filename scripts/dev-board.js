@@ -50,20 +50,27 @@ document.getElementById('clear-history-btn').addEventListener('click', function 
 const bgColors = ['#BECEF3', '#C8E3D7', '#EBEBFB', '#CBB8D6', '#98D4C5'];
 
 let clickIndex = 0;
+const bgChageBtn = document.getElementById('bg-change-btn');
 
-document.getElementById('bg-change-btn').addEventListener('click', function () {
+let rotation = 0;
+
+bgChageBtn.addEventListener('click', function () {
     document.body.style.backgroundColor = bgColors[clickIndex];
     clickIndex++
     if (clickIndex >= bgColors.length) {
         clickIndex = 0;
     }
+
+    rotation += 20;
+    bgChageBtn.style.transform = `rotate(${rotation}deg)`;
+
 });
 
 
 // Link to blog html
 
 document.getElementById('discover').addEventListener('click', function () {
-    window.location.href = 'blog.html'
+    window.location.href = 'blog.html';
 })
 
 
