@@ -24,7 +24,13 @@ function setCurrentDateByID(id) {
 
     const currentDate = `${dayName}, ${date} ${monthName} ${year}`;
 
+    const expectedDate = document.createElement('div')
+
+    expectedDate.innerHTML = ``
+
     document.getElementById(id).innerText = currentDate;
+
+
 }
 
 // St Current Dt in Display by calling id name

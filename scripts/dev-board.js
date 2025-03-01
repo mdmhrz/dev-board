@@ -32,7 +32,7 @@ for (const btn of taskBtnsArray) {
         const newHistory = document.createElement('div');
         newHistory.innerHTML = `
             <p class="bg-custom1 p-3 mb-4 rounded-md shadow-md">
-            You have completed the task ${title} at ${getTime}
+            You have completed the task <span class="font-semibold text-blue-500">${title}</span> at ${getTime}
             </p>
         `;
 
