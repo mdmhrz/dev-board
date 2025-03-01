@@ -84,7 +84,7 @@
                 <!-- Cards 01 -->
                 <div class="bg-custom1 p-4 rounded-md shadow-xl">
                     <button class="p-2 bg-white rounded-md mb-2 text-[16px] cursor-text">Shop Ease</button>
-                    <h1 class="text-[24px] font-bold mb-3">Fix Mobile Button Issue</h1>
+                    <h1 id="title-1" class="text-[24px] font-bold mb-3">Fix Mobile Button Issue</h1>
                     <p class="p-2 mb-4 bg-[#ffff] rounded-md text-[14px]">Debug using Chrome DevTools, check for
                         overlapping elements, and ensure onClick works properly
                         and ensure onClick works properly</p>
@@ -207,11 +207,6 @@
                             class="task-btn px-3 py-2 rounded-md hover:bg-blue-600 bg-blue-500 text-white">Completed</button>
                     </div>
                 </div>
-
-
-
-
-
             </div>
         </section>
         <!-- Activity Log -->
@@ -228,10 +223,15 @@
             <div class="relative mb-10">
                 <div class="absolute left-[-16px] right-[-16px] border-t-2 border-dashed border-gray-200"></div>
             </div>
+
+            <div id="activity-log-container">
+
+            </div>
         </section>
 
     </main>
-    <script src="../scripts/script.js"></script>
+    <script src="./scripts/dev-board.js"></script>
+    <script src="./scripts/utilities.js"></script>
 </body>
 
 </html>
