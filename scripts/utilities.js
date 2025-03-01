@@ -26,7 +26,9 @@ function setCurrentDateByID(id) {
 
     const expectedDate = document.createElement('div')
 
-    expectedDate.innerHTML = ``
+    expectedDate.innerHTML = `
+        div
+    `
 
     document.getElementById(id).innerText = currentDate;
 

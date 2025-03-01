@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 p-6">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold text-center mb-6">📚 Blogs</h1>
+        <div class="space-y-6">
+            <div class="p-5 rounded-2xl shadow-md bg-gray-100 hover:scale-105 transition-transform">
+                <h2 class="text-lg font-semibold">❓ What are the different ways to select an element in the DOM?</h2>
+                <ul class="mt-2 text-gray-700 list-disc list-inside">
+                    <li><code>document.getElementById('id')</code></li>
+                    <li><code>document.getElementsByClassName('class')</code></li>
+                    <li><code>document.getElementsByTagName('tag')</code></li>
+                    <li><code>document.querySelector('selector')</code></li>
+                    <li><code>document.querySelectorAll('selector')</code></li>
+                </ul>
+            </div>
+            <div class="p-5 rounded-2xl shadow-md bg-white hover:scale-105 transition-transform">
+                <h2 class="text-lg font-semibold">❓ What is the difference between innerHTML, innerText, and
+                    textContent?</h2>
+                <ul class="mt-2 text-gray-700 list-disc list-inside">
+                    <li><b>innerHTML:</b> Gets or sets the HTML content inside an element, including any HTML tags.</li>
+                    <li><b>innerText:</b> Gets or sets the visible text content of an element, excluding hidden elements
+                        and respecting CSS styling.</li>
+                    <li><b>textContent:</b> Gets or sets the text content of an element, including hidden elements, but
+                        excluding HTML tags.</li>
+                </ul>
+            </div>
+            <div class="p-5 rounded-2xl shadow-md bg-gray-100 hover:scale-105 transition-transform">
+                <h2 class="text-lg font-semibold">❓ What is event delegation in the DOM?</h2>
+                <p class="mt-2 text-gray-700">Event delegation is a technique where you add a single event listener to a
+                    parent element to manage events for all of its child elements. This helps improve performance by
+                    reducing the number of event listeners.</p>
+            </div>
+            <div class="p-5 rounded-2xl shadow-md bg-white hover:scale-105 transition-transform">
+                <h2 class="text-lg font-semibold">❓ What is event bubbling in the DOM?</h2>
+                <p class="mt-2 text-gray-700">Event bubbling is a mechanism where an event triggered on a child element
+                    propagates up through its ancestors in the DOM tree, allowing parent elements to handle events that
+                    occur on their child elements.</p>
+            </div>
+            <div class="p-5 rounded-2xl shadow-md bg-gray-100 hover:scale-105 transition-transform">
+                <h2 class="text-lg font-semibold">❓ How do you create, add, and remove elements using JavaScript?</h2>
+                <ul class="mt-2 text-gray-700 list-disc list-inside">
+                    <li><b>Create:</b> Use <code>document.createElement('tagName')</code> to create a new element.</li>
+                    <li><b>Append:</b> Use <code>appendChild()</code> to add it to the DOM.</li>
+                    <li><b>Remove:</b> Use <code>removeChild()</code> or <code>element.remove()</code> to delete an
+                        element.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -52,7 +52,6 @@
                 <hr>
                 <br>
                 <ul class="">
-                    <h1 class="font-medium">Here are few ways to select and element using DOM</h1>
                     <li class="list-disc ml-5 text-[14px]">document.getElementById('id')</li>
                     <li class="list-disc ml-5 text-[14px]">document.getElementsByClassName('class')</li>
                     <li class="list-disc ml-5 text-[14px]">document.getElementsByTagName('tag')</li>
@@ -67,15 +66,13 @@
                 <hr>
                 <br>
                 <ul>
-                    <li class="list-disc ml-5 text-[14px]"><span class="font-semibold">innerHTML:</span> Gets or sets
-                        the HTML content inside an element,
-                        including any HTML tags.</li>
-                    <li class="list-disc ml-5 text-[14px]"><span class="font-semibold">innerText:</span> Gets or sets
-                        the visible text content of an
-                        element, excluding hidden elements and respecting CSS styling.</li>
-                    <li class="list-disc ml-5 text-[14px]"><span class="font-semibold">textContent:</span> Gets or sets
-                        the text content of an element,
-                        including hidden elements, but excluding HTML tags.</li>
+                    <li class="list-disc ml-5 text-[14px]"><span class="font-semibold">innerHTML:</span> Gets
+                        the HTML & text content inside an element, including any HTML tags.</li>
+                    <li class="list-disc ml-5 text-[14px]"><span class="font-semibold">innerText:</span> Gets
+                        the text content inside of an
+                        element.</li>
+                    <li class="list-disc ml-5 text-[14px]"><span class="font-semibold">textContent:</span> Gets
+                        the text content of an element, but excluding HTML tags.</li>
                 </ul>
             </div>
             <div class="bg-white p-4 rounded-md mb-3">
@@ -83,8 +80,7 @@
                 <hr>
                 <br>
                 <p class="text-[14px]">Event delegation is a technique where you add a single event listener to a parent
-                    element to manage events for all of its child elements. This is useful for handling events on
-                    dynamically added elements or for improving performance by reducing the number of event listeners.
+                    element, which can handle events for all of its child elements.
                 </p>
             </div>
             <div class="bg-white p-4 rounded-md mb-3">
@@ -92,9 +88,8 @@
                 <hr>
                 <br>
                 <p class="text-[14px]">
-                    Event bubbling is a mechanism in the DOM where an event triggered on a child element propagates up
-                    through its ancestors in the DOM tree. This allows parent elements to handle events that occur on
-                    their child elements.
+                    Event bubbling is when an event on a child element moves up to its parent elements, allowing them to
+                    handle it.
                 </p>
             </div>
             <div class="bg-white p-4 rounded-md mb-3">
@@ -104,6 +99,9 @@
                 <ul class="text-[14px]">
                     <li class="list-disc ml-5">Create: Use document.createElement('tagName') to create a new element.
                     </li>
+                    <li class="list-disc ml-5">Add: Use parent.appendChild(element) to add it to the DOM.</li>
+                    <li class="list-disc ml-5">Remove: Use element.remove() or parent.removeChild(element) to delete an
+                        element..</li>
                 </ul>
             </div>
         </div>
