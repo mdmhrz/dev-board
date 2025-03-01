@@ -26,3 +26,6 @@ function setCurrentDateByID(id) {
 
     document.getElementById(id).innerText = currentDate;
 }
+
+// St Current Dt in Display by calling id name
+setCurrentDateByID('display-date');
