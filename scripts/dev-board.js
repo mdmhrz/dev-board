@@ -60,3 +60,10 @@ document.getElementById('bg-change-btn').addEventListener('click', function () {
 });
 
 
+// Link to blog html
+
+document.getElementById('discover').addEventListener('click', function () {
+    window.location.href = 'blog.html'
+})
+
+
