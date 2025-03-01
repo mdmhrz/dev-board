@@ -38,13 +38,24 @@ for (const btn of taskBtns) {
         `;
 
         historyContainer.appendChild(newHistory)
-
-
-
-
-
-
-
     })
 }
+
+// Clear History
+document.getElementById('clear-history-btn').addEventListener('click', function () {
+    document.getElementById('activity-log-container').innerHTML = '';
+})
+
+// Background Change 
+const bgColors = ['#BECEF3', '#C8E3D7', '#EBEBFB', '#CBB8D6', '#98D4C5'];
+
+let clickIndex = 0;
+
+document.getElementById('bg-change-btn').addEventListener('click', function () {
+    document.body.style.backgroundColor = bgColors[clickIndex];
+    clickIndex++
+    if (clickIndex >= bgColors.length) {
+        clickIndex = 0;
+    }
+});
 
