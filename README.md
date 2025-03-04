@@ -1,6 +1,6 @@
 # Dev Board
 
-![Dev Board Banner](https://via.placeholder.com/1200x400.png?text=Dev+Board+Banner) <!-- Replace with your banner image -->
+![Dev Board Banner](https://mdmhrz.github.io/food-restaurant/assets/biriyani.png) <!-- Replace with your banner image -->
 
 **Dev Board** is a modern, interactive dashboard designed for developers to manage tasks, track progress, and collaborate efficiently. This project is built with cutting-edge technologies to provide a seamless user experience.
 
